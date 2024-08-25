@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Ship</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="intro">
+        <h1 id="game-name"></h1>
+        <h3 id="welcom"></h3>
+        <button id="trigger"></button>
+    </div>
+
+    <div class="main-board">
+        <div class="preferences">
+            <select name="pref" id="pref">
+                <option value="hac" selected>Hover and Click</option>
+                <option value="dad">Drag And Drop</option>
+                <option value="ran">Up to random</option>
+            </select>
+            <select name="dir" id="dir">
+                <option value="hor">Horizontal</option>
+                <option value="ver">Vertical</option>
+            </select>
+            <select name="length" id="len">
+                <option value="2" disabled selected>2</option>
+                <option value="3" disabled>3</option>
+                <option value="4" disabled>4</option>
+                <option value="5" disabled>5</option>
+            </select>
+        </div>
+        <div class="all">
+            <div class="grid-container maintain">
+            </div>
+            <div class="dradro">
+                <div draggable="true">
+                    <div class="dp" style="cursor: grab">drag Here</div>
+                    <div></div>
+                </div>
+                <div draggable="true">
+                    <div class="dp" style="cursor: grab">drag Here</div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div draggable="true">
+                    <div class="dp" style="cursor: grab">drag Here</div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div draggable="true">
+                    <div class="dp" style="cursor: grab">drag Here</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div draggable="true">
+                    <div class="dp" style="cursor: grab">drag Here</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <button class="goto">Get to the field</button>
+                <div class="yyy"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="game-field">
+        <div class="infos">
+            <div class="notice"></div>
+            <div id="times"></div>
+        </div>
+
+        <div class="fields">
+            <div>
+                <div>
+                    <h1>Friedly Water <sup>Sunk ships: </sup><sup id="fr-snk">0</sup></h1>
+                </div><br>
+                <div class="grid-container friend"></div>
+            </div>
+            <div>
+                <div>
+                    <h1>Enemy Water <sup>Sunk ships: </sup><sup id="en-snk">0</sup></h1>
+                </div><br>
+                <div class="grid-container enemy"></div>
+            </div>
+        </div>
+    </div>
+    <dialog>
+
+    </dialog>
+</body>
+</html>
